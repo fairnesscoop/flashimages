@@ -78,6 +78,7 @@ import { GetShootingByIdQueryHandler } from 'src/Application/School/Query/Shooti
 import { GetShootingAction } from './Action/Shooting/GetShootingAction';
 import { GetSchoolUploadEnpointAction } from './Action/Photo/GetUploadEnpointAction';
 import { IngestionModule } from '../Ingestion/ingestion.module';
+import { CreateSchoolIngestion } from './Action/Photo/CreateSchoolIngestionAction';
 
 @Module({
   imports: [
@@ -120,6 +121,7 @@ import { IngestionModule } from '../Ingestion/ingestion.module';
     CountSchoolDiscountsAction,
     RemoveDiscountAction,
     GetSchoolUploadEnpointAction,
+    CreateSchoolIngestion,
   ],
   providers: [
     { provide: 'ICodeGenerator', useClass: CodeGeneratorAdapter },
