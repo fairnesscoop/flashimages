@@ -76,13 +76,10 @@ import { RemoveDiscountCommandHandler } from 'src/Application/School/Command/Dis
 import { SchoolCreatedEventListener } from 'src/Application/School/EventListener/SchoolCreatedEventListener';
 import { GetShootingByIdQueryHandler } from 'src/Application/School/Query/Shooting/GetShootingByIdQueryHandler';
 import { GetShootingAction } from './Action/Shooting/GetShootingAction';
-import { IngestionModule } from '../Ingestion/ingestion.module';
-import { CreateFileIngestionAction } from './Action/Photo/CreateFileIngestionAction';
 
 @Module({
   imports: [
     BusModule,
-    IngestionModule,
     TypeOrmModule.forFeature([
       School,
       Photo,
@@ -119,7 +116,6 @@ import { CreateFileIngestionAction } from './Action/Photo/CreateFileIngestionAct
     CreateDiscountAction,
     CountSchoolDiscountsAction,
     RemoveDiscountAction,
-    CreateFileIngestionAction,
   ],
   providers: [
     { provide: 'ICodeGenerator', useClass: CodeGeneratorAdapter },
