@@ -115,7 +115,7 @@ import { GetShootingAction } from './Action/Shooting/GetShootingAction';
     GetSchoolDiscountsAction,
     CreateDiscountAction,
     CountSchoolDiscountsAction,
-    RemoveDiscountAction
+    RemoveDiscountAction,
   ],
   providers: [
     { provide: 'ICodeGenerator', useClass: CodeGeneratorAdapter },
